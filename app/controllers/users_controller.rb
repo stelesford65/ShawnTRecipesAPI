@@ -1,4 +1,4 @@
-class UserController < ApplicationController
+class UsersController < ApplicationController
   before_action :authorized, only: [:auto_login]
   #creates a new user then return the user and their token
   # REGISTER
@@ -32,3 +32,4 @@ class UserController < ApplicationController
     params.permit(:username, :password, :age)
   end
 end
+

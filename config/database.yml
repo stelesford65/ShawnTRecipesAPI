@@ -7,20 +7,23 @@ default: &default
 development:
   <<: *default
   database: recipe_development
+  host: localhost
   username: shawn
   password: test1
   port: 5432
-  host: localhost
+
 
 #Feel Free to change the username and password to match your local postgres env
 test:
   <<: *default
   database: recipe_test
+  host: localhost
   username: shawn
   password: test1
   port: 5432
-  host: localhost
+
 
 
 production:
+  <<: *default
   url: <%= ENV['DATABASE_URL'] %>
